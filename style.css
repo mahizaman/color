@@ -1,0 +1,38 @@
+.one{ 
+    background-image: radial-gradient(farthest-corner at 40px 40px,#00196f 100%, #ddd 100%);
+      background-repeat: no-repeat;
+      height: 60rem;
+      color: aliceblue;
+    }
+
+.two{
+      background-color: #000046;
+      background-repeat: no-repeat;
+      height: 60rem;
+      color: aliceblue;
+}
+
+.three{
+      background-color: #000000;
+      background-image: linear-gradient(315deg, #1e3c72 0%, #1A237E 74%);
+      background-repeat: no-repeat;
+      height: 60rem;
+      color: aliceblue;
+
+}
+
+.four{
+      background-color: #000428;
+      background-image: linear-gradient(315deg, #000428 0%, #000046 74%);
+      background-repeat: no-repeat;
+      height: 60rem;
+      color: aliceblue;
+}
+
+.five{
+      background-image: radial-gradient(farthest-corner at 40px 40px,
+      #000f46 100%,#ddd 100%);
+      background-repeat: no-repeat;
+      height: 60rem;
+      color: aliceblue;
+}

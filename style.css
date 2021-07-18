@@ -1,38 +1,257 @@
-.one{ 
-    background-image: radial-gradient(farthest-corner at 40px 40px,#00196f 100%, #ddd 100%);
-      background-repeat: no-repeat;
-      height: 60rem;
-      color: aliceblue;
-    }
+
+/*one*/
+/*one*/
+/*one*/
+
+.one{
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+  .water{
+        
+      width:400px;
+      height: 400px;
+      background-color: skyblue;
+      border-radius: 50%;
+      position: relative;
+      box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+      overflow: hidden;
+  }
+  .water:before, .water:after{
+      content:'';
+      position: absolute;
+      width:400px;
+      height: 400px;
+      top:-150px;
+      background-color: #fff;
+  }
+  .water:before{
+      border-radius: 45%;
+      background:rgba(255,255,255,.7);
+      animation:wave 5s linear infinite;
+  }
+  .water:after{
+      border-radius: 35%;
+      background:rgba(255,255,255,.3);
+      animation:wave 5s linear infinite;
+  }
+  @keyframes wave{
+      0%{
+          transform: rotate(0);
+      }
+      100%{
+          transform: rotate(360deg);
+      }
+  }
+
+
+/*two*/
+/*two*/
+/*two*/
 
 .two{
-      background-color: #000046;
-      background-repeat: no-repeat;
-      height: 60rem;
-      color: aliceblue;
+	background-color: rgb(243, 243, 243);
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width:100vw;
+	display:flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.three{
-      background-color: #000000;
-      background-image: linear-gradient(315deg, #1e3c72 0%, #1A237E 74%);
-      background-repeat: no-repeat;
-      height: 60rem;
-      color: aliceblue;
-
+.loader{
+	-webkit-perspective:700px;
+	perspective: 700px;
 }
 
-.four{
-      background-color: #000428;
-      background-image: linear-gradient(315deg, #000428 0%, #000046 74%);
-      background-repeat: no-repeat;
-      height: 60rem;
-      color: aliceblue;
+.loader>span{
+	font-size: 130px;
+	font-family: "franklin gothic medium",sans-serif;
+	display: inline-block;
+	animation:flip 2.6s infinite linear;
+	transform-origin:0 70%;
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
 }
 
-.five{
-      background-image: radial-gradient(farthest-corner at 40px 40px,
-      #000f46 100%,#ddd 100%);
-      background-repeat: no-repeat;
-      height: 60rem;
-      color: aliceblue;
+@keyframes flip{
+	35%{
+		transform: rotateX(360deg);
+	}
+	100%{
+		transform: rotatex(360deg);
+	}
 }
+
+
+.loader>span:nth-child(even){
+	color:rgb(0, 132, 255);
+}
+
+.loader>span:nth-child(odd){
+	color:rgb(0, 0, 0);
+}
+
+
+
+.loader>span:nth-child(2){
+	animation-delay: 0.3s;
+}
+
+.loader>span:nth-child(3){
+	animation-delay: 0.6s;
+}
+
+.loader>span:nth-child(4){
+	animation-delay: 0.9s;
+}
+
+.loader>span:nth-child(5){
+	animation-delay: 1.2s;
+}
+
+.loader>span:nth-child(6){
+	animation-delay: 1.5s
+}
+
+.loader>span:nth-child(7){
+	animation-delay: 1.8s
+}
+
+/*three*/
+/*three*/
+/*three*/
+/*three*/
+.three {
+      background-color: rgb(255, 255, 255);
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width:100vw;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+    }
+    #preloader {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color:  #041b85;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #0041f5;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+    }
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #00c3ff;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
+    @-webkit-keyframes spin {
+        0%   {
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes spin {
+        0%   {
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+
+    /*four*/
+    /*four*/
+    /*four*/
+    .four {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      grid-auto-rows: 130px;
+      place-items:center;
+      height: 70rem;
+      background-color: rgb(243, 243, 243);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    .continuous-4 {
+      width: 50%;
+      height: 25px;
+      border-radius: 40px;
+      color: #006eff;
+      border: 2px solid;
+      position: relative;
+      overflow: hidden;
+      margin-top: 50%;
+    }
+    
+    .continuous-4::before {
+      content: "";
+      position: absolute;
+      margin: 2px;
+      width: 14px;
+      top: 0;
+      bottom: 0;
+      left: -20px;
+      border-radius: inherit;
+      background: currentColor;
+      box-shadow: -10px 0 12px 3px currentColor;
+      clip-path: polygon(0 5%, 100% 0,100% 100%,0 95%,-30px 50%);
+      animation: ct4 3s infinite linear;
+    }
+    
+    @keyframes ct4 {
+      100% {left: calc(100% + 20px)}
+    }
